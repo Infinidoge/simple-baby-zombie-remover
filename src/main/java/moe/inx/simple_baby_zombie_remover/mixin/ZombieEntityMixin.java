@@ -9,7 +9,7 @@ import net.minecraft.entity.mob.ZombieEntity;
 
 @Mixin(ZombieEntity.class)
 public abstract class ZombieEntityMixin {
-	@Inject(method = "/method_29936/", at = @At(value = "RETURN"), cancellable = true, remap = false)
+	@Inject(method = "method_29936", at = @At(value = "RETURN"), cancellable = true, remap = false)
 	private static void simple_baby_zombie_remover$shouldBeBaby(CallbackInfoReturnable<Boolean> ci) {
 		ci.setReturnValue(false);
 	}
