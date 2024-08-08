@@ -4,6 +4,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.entity.mob.ZombieEntity;
 
@@ -13,4 +14,10 @@ public abstract class ZombieEntityMixin {
 	private static void simple_baby_zombie_remover$shouldBeBaby(CallbackInfoReturnable<Boolean> ci) {
 		ci.setReturnValue(false);
 	}
+
+	// Uncomment to create 'complete' version
+	//@Inject(method = "setBaby", at = @At(value = "HEAD"), cancellable = true)
+	//public void simple_baby_zombie_remover$setBaby(CallbackInfo ci) {
+	//	ci.cancel();
+	//}
 }
