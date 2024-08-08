@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "simple_baby_zombie_remover",
+	"version": "${version}",
+
+	"name": "Simple Baby Zombie Remover",
+	"description": "Removes Baby Zombies. That's it.",
+	"authors": ["Infinidoge"],
+	"contact": {
+		"homepage": "https://github.com/Infinidoge/simple-baby-zombie-remover",
+		"sources": "https://github.com/Infinidoge/simple-baby-zombie-remover"
+	},
+
+	"license": "MIT",
+	"icon": "assets/simple_baby_zombie_remover/icon.png",
+
+	"environment": "client",
+	"entrypoints": {},
+	"mixins": ["simple_baby_zombie_remover.mixins.json"],
+
+	"depends": {
+		"fabricloader": ">=0.14.9",
+		"minecraft": ">=1.16"
+	}
+}

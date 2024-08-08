@@ -1,0 +1,33 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "moe.inx",
+		"id": "simple_baby_zombie_remover",
+		"version": "${version}",
+		"metadata": {
+			"name": "Simple Baby Zombie Remover",
+			"description": "Removes Baby Zombies. That's it.",
+			"contributors": {
+				"Infinidoge": "Owner"
+			},
+			"contact": {
+				"homepage": "https://github.com/Infinidoge/simple-baby-zombie-remover",
+				"issues": "https://github.com/Infinidoge/simple-baby-zombie-remover/issues",
+				"sources": "https://github.com/Infinidoge/simple-baby-zombie-remover"
+			},
+			"icon": "assets/simple_baby_zombie_remover/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.16"
+			}
+		]
+	},
+	"mixin": "simple_baby_zombie_remover.mixins.json"
+}
