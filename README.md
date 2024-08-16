@@ -1,14 +1,15 @@
 # Simple Baby Zombie Remover
 
-Removes Baby Zombies. That's the entire mod. (Okay technically it only disables natural baby zombie spawning.)
+Removes Baby Zombies. That's the entire mod.
 
-Overrides `ZombieEntity`'s `shouldBeBaby` method to always return `false`.
+- Simple: Overrides `ZombieEntity`'s `shouldBeBaby` method to always return `false`. This just prevents natural spawning.
+- Complete: Overrides `ZombieEntity`'s `setBaby` method to do nothing. This removes baby zombies **entirely**.
 
 ## Known Incompatibilities
-- SIHYWTCAMD: The mod spawns zombies in a way that forces zombies to be babies 50% of the time, instead of working with Minecraft's `shouldBeBaby` method.
+- SIHYWTCAMD: The mod spawns zombies in a way that forces zombies to be babies 50% of the time, instead of working with Minecraft's `shouldBeBaby` method. Use the Complete version.
 
-## Complete Version
-There is a version of this mod that prevents zombies from becoming babies entirely (through injecting into `setBaby` to not do anything.)
-If you want to disable babies from spawning, for example in SIHYWTCAMD, use this version. Do note, however, that this will make it entirely impossible to spawn baby zombies, even through spawn eggs or commands.
+## Building
 
-See comment in mixin file for building the complete version.
+To build the mod, run `./gradlew build`. To select the version, edit `variant` in `gradle.properties` to either `simple` or `complete` (Case sensitive.)
+
+This edits the corresponding metadata files to load the right mixins.
