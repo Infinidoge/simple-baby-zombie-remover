@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "simple_baby_zombie_remover",
+	"id": "${variant}_baby_zombie_remover",
 	"version": "${version}",
 
-	"name": "Simple Baby Zombie Remover",
+	"name": "${variantUpper} Baby Zombie Remover",
 	"description": "Removes Baby Zombies. That's it.",
 	"authors": ["Infinidoge"],
 	"contact": {
@@ -14,12 +14,13 @@
 	"license": "MIT",
 	"icon": "assets/simple_baby_zombie_remover/icon.png",
 
-	"environment": "client",
-	"entrypoints": {},
 	"mixins": ["simple_baby_zombie_remover.mixins.json"],
 
 	"depends": {
 		"fabricloader": ">=0.14.9",
 		"minecraft": ">=1.16"
+	},
+	"breaks": {
+		"${variantOpposite}_baby_zombie_remover": "*"
 	}
 }

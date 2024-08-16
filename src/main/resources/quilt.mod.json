@@ -2,10 +2,10 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "moe.inx",
-		"id": "simple_baby_zombie_remover",
+		"id": "${variant}_baby_zombie_remover",
 		"version": "${version}",
 		"metadata": {
-			"name": "Simple Baby Zombie Remover",
+			"name": "${variantUpper} Baby Zombie Remover",
 			"description": "Removes Baby Zombies. That's it.",
 			"contributors": {
 				"Infinidoge": "Owner"
@@ -27,6 +27,9 @@
 				"id": "minecraft",
 				"versions": ">=1.16"
 			}
+		],
+		"breaks": [
+			"${variantOpposite}_baby_zombie_remover"
 		]
 	},
 	"mixin": "simple_baby_zombie_remover.mixins.json"

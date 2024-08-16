@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "moe.inx.simple_baby_zombie_remover.mixin",
   "compatibilityLevel": "JAVA_11",
-  "mixins": ["ZombieEntityMixin"],
+  "mixins": ["${variantUpper}ZombieEntityMixin"],
   "client": [],
   "injectors": {
     "defaultRequire": 1

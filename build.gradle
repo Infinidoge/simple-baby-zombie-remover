@@ -3,7 +3,11 @@ plugins {
 	alias(libs.plugins.quilt.loom)
 }
 
-archivesBaseName = project.archives_base_name
+loom {
+	serverOnlyMinecraftJar()
+}
+
+archivesBaseName = "${project.variant}_${project.archives_base_name}"
 version = project.version
 group = project.maven_group
 
@@ -16,8 +20,15 @@ dependencies {
 }
 
 processResources {
-	filesMatching('*.mod.json') {
-		expand version: version
+	inputs.property(variant, project.variant)
+
+	filesMatching('*.json') {
+		expand(
+			version: version,
+			variant: variant,
+			variantOpposite: (variant == "simple") ? "complete" : "simple",
+			variantUpper: variant.capitalize()
+		)
 	}
 }
 
